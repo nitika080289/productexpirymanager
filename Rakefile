@@ -4,7 +4,3 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
-
-task send_notifications: :environment do
-  NotificationMailer.notification_email.deliver
-end
