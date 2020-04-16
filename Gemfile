@@ -47,3 +47,5 @@ gem 'sidekiq-scheduler'
 gem 'omniauth-google-oauth2'
 gem 'omniauth'
 gem 'webpacker-react'
+gem "react_on_rails", "11.1.4"
+gem "webpacker"
