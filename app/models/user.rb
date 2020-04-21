@@ -9,7 +9,6 @@ class User < ApplicationRecord
       user.email = auth.info.email
       user.save!
       #create cookie after user is made
-      cookies.encrypted[:current_user_id] = { value: user.id, expires: Time.now + 7.days }
     end
   end
 end

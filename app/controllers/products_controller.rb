@@ -5,8 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @product = Product.all
-    render json: @product
+    @products = Product.where('user_id = ' + current_user.id.to_s)
+    render json: @products
   end
 
   def destroy
