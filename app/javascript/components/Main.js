@@ -1,11 +1,10 @@
 import React from "react"
-import PropTypes from "prop-types"
-import ProductList from "./ProductList";
+import Body from "./Body"
 class Main extends React.Component {
   render () {
     return (
         <div>
-        <ProductList />
+            <Body />
         </div>
     );
   }

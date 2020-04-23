@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  protect_from_forgery with: :null_session
   def show
     @product = Product.find(params[:id])
     render json: @product
@@ -20,11 +21,18 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(params[:product])
+    @product = Product.new(product_params)
+    @product.created_at = Time.now
+    @product.updated_at = Time.now
+    @product.user_id = current_user.id
     if @product.save
       render json: @product
     else
-      render error: { error: 'Unable to save product.' }, status: 400
+      render json: { error: 'Unable to create product' }, status: 400
     end
+  end
+
+  def product_params
+    params.require(:product).permit(:name, :expiry_date, :quantity)
   end
 end

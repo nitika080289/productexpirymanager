@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :user
-  validates_presence_of :name, :quantity, :expiry_date, :user_id
+  validates_presence_of :name, :quantity, :expiry_date
 
   def list_expiring_products
     User.all.each do |user|
