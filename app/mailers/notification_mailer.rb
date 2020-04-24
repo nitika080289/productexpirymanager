@@ -1,4 +1,3 @@
-require_relative 'application_mailer'
 class NotificationMailer < ApplicationMailer
   def notification_email
     @message = ''

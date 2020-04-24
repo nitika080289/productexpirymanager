@@ -45,5 +45,6 @@ module Productexpirymanager
         authentication: :plain,
         enable_starttls_auto: true
     }.compact
+    config.active_job.queue_adapter = :sidekiq
   end
 end
