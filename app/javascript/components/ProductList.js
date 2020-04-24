@@ -9,6 +9,7 @@ class ProductList extends React.Component {
               <td>{product.name}</td>
               <td>{product.expiry_date}</td>
               <td>{product.quantity}</td>
+              <td><button onClick={()=> this.props.handleDelete(product.id)}>Delete</button></td>
           </tr>
       )
     });
@@ -20,6 +21,7 @@ class ProductList extends React.Component {
                     <th>Product Name</th>
                     <th>Expiry Date</th>
                     <th>Quantity</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>

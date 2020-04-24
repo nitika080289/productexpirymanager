@@ -10,6 +10,7 @@ class Body extends React.Component {
         };
         this.handleSubmit = this.handleSubmit.bind(this)
         this.addNewProduct = this.addNewProduct.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
     handleSubmit(name, expiry_date, quantity) {
         var body = JSON.stringify({product: {name: name, expiry_date: expiry_date, quantity: quantity}})
@@ -29,11 +30,28 @@ class Body extends React.Component {
             })
 
     }
+    handleDelete(id){
+        fetch('/products/'+id,
+            {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then((response) => {
+               this.deleteProduct(id)
+        })
+    }
     addNewProduct(product) {
         this.setState({
             products: this.state.products.concat(product)
         })
     }
+    deleteProduct(id){
+        var newProductList = this.state.products.filter((product) => product.id !== id)
+        this.setState({
+            products: newProductList
+        })
+}
     componentDidMount(){
         fetch('/products.json')
             .then((response) => {return response.json()})
@@ -43,7 +61,7 @@ class Body extends React.Component {
         return(
             <div>
                 <AddProduct handleSubmit={this.handleSubmit}/>
-                <ProductList products={this.state.products} />
+                <ProductList products={this.state.products} handleDelete = {this.handleDelete} />
             </div>
         )
     }
