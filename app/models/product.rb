@@ -8,8 +8,7 @@ class Product < ApplicationRecord
     end
   end
 
-  def list_expired_products(user_id, days)
-    Product.find(user_id).where('expiry_date - sysdate <= :days')
+  def list_expired_products(user_id, _days)
+    Product.find(user_id).where('expiry_date - sysdate <= :_days')
   end
-
 end

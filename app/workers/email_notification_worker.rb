@@ -5,5 +5,4 @@ class EmailNotificationWorker
   def perform
     NotificationMailer.notification_email.deliver
   end
-
 end
