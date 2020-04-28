@@ -1,4 +1,0 @@
-:schedule:
-  product_expiry_notifier:
-    cron: '40 16 * * *'
-    class: EmailNotificationWorker

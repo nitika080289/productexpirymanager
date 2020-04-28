@@ -64,7 +64,6 @@ GEM
     connection_pool (2.2.2)
     crass (1.0.6)
     dotenv (2.7.5)
-    e2mmap (0.1.0)
     erubi (1.9.0)
     et-orbi (1.2.4)
       tzinfo
@@ -170,13 +169,9 @@ GEM
       rack (~> 2.0)
       rack-protection (>= 2.0.0)
       redis (>= 4.1.0)
-    sidekiq-scheduler (3.0.1)
-      e2mmap
-      redis (>= 3, < 5)
-      rufus-scheduler (~> 3.2)
-      sidekiq (>= 3)
-      thwait
-      tilt (>= 1.4.0)
+    sidekiq-cron (1.2.0)
+      fugit (~> 1.1)
+      sidekiq (>= 4.2.1)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -190,8 +185,6 @@ GEM
       sprockets (>= 3.0.0)
     thor (1.0.1)
     thread_safe (0.3.6)
-    thwait (0.1.0)
-    tilt (2.0.10)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     webpacker (5.0.1)
@@ -221,7 +214,8 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
   railties
-  sidekiq-scheduler
+  sidekiq
+  sidekiq-cron
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
