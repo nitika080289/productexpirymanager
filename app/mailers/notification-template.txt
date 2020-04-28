@@ -1,3 +1,0 @@
-Hi <%= @user %>,
-
-This is to inform you that

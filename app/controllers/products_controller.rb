@@ -1,11 +1,16 @@
 class ProductsController < ApplicationController
   def show
-    @product = Product.find(params[:user_id])
+    @product = Product.find(params[:id])
+    render json: @product
+  end
+
+  def index
+    @product = Product.all
     render json: @product
   end
 
   def destroy
-    @product = Product.find(params[:product_id])
+    @product = Product.find(params[:id])
     @product.destroy
     if @product.destroy
       render json: { message: 'Product deleted successfully' }, status: 200
