@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   def create
     # Get access tokens from the google server
     access_token = request.env["omniauth.auth"]
-    User.create_from_omniauth(access_token)
+    User.create_from_omniauth(access_token, cookies)
     redirect_to root_path
   end
 
