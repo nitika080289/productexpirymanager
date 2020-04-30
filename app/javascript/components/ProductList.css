@@ -15,29 +15,49 @@ tr:nth-child(even) {
 }
 
 .red_dot {
-    height: 15px;
-    width: 15px;
+    height: 14px;
+    width: 14px;
     background-color: #FF0000;
     border-radius: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .green_dot {
-    height: 15px;
-    width: 15px;
+    height: 14px;
+    width: 14px;
     background-color: #008000;
     border-radius: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .yellow_dot {
-    height: 15px;
-    width: 15px;
+    height: 14px;
+    width: 14px;
     background-color: #FFFF00;
     border-radius: 50%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+}
+.btn:hover {
+    background-color: RoyalBlue;
+}
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    font-size: 10px;
+    cursor: pointer;
+}
+label{
+    margin-left: 10px;
+}
+.button {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 10px;
 }

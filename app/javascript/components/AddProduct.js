@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import './ProductList.css'
 class AddProduct extends React.Component {
     render() {
@@ -9,10 +8,13 @@ class AddProduct extends React.Component {
                 formFields.expiry_date.value,formFields.quantity.value);
                 event.target.reset;}}>
                 <h3>Add a product</h3>
-                <input ref={input => formFields.name = input} placeholder='Product Name'/>
-                <input ref={input => formFields.expiry_date = input} placeholder='Expiry Date'/>
-                <input ref={input => formFields.quantity = input} placeholder='Quantity'/>
-                <button>Submit</button>
+                <label htmlFor="Name">Product Name: </label>
+                <input ref={input => formFields.name = input}/>
+                <label htmlFor="expiryDate">ExpiryDate: </label>
+                <input type="date" ref={input => formFields.expiry_date = input}/>
+                <label htmlFor="Quantity">Quantity: </label>
+                <input ref={input => formFields.quantity = input}/>
+                <button className="button">Add</button>
             </form>
         )
     }

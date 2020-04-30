@@ -1,6 +1,7 @@
 import React from "react"
 import ProductList from "./ProductList";
 import AddProduct from "./AddProduct";
+import * as moment from "moment"
 
 class Body extends React.Component {
     constructor(props) {
@@ -13,7 +14,8 @@ class Body extends React.Component {
         this.handleDelete = this.handleDelete.bind(this)
     }
     handleSubmit(name, expiry_date, quantity) {
-        var body = JSON.stringify({product: {name: name, expiry_date: expiry_date, quantity: quantity}})
+        var expiry_date_formatted = moment(expiry_date).format('YYYY-MM-DD')
+        var body = JSON.stringify({product: {name: name, expiry_date: expiry_date_formatted, quantity: quantity}})
         var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
         fetch('/products', {
             method: 'POST',
@@ -61,6 +63,7 @@ class Body extends React.Component {
         return(
             <div>
                 <AddProduct handleSubmit={this.handleSubmit}/>
+                <br></br>
                 <ProductList products={this.state.products} handleDelete = {this.handleDelete} />
             </div>
         )
