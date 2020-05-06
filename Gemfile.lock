@@ -68,6 +68,7 @@ GEM
     connection_pool (2.2.2)
     crass (1.0.6)
     dotenv (2.7.5)
+    e2mmap (0.1.0)
     erubi (1.9.0)
     et-orbi (1.2.4)
       tzinfo
