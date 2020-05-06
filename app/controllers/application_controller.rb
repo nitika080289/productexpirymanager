@@ -11,11 +11,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     if cookies.encrypted[:current_user_id].present?
-      begin
-        User.find(cookies.encrypted[:current_user_id])
-      rescue
-        nil
-      end
+      User.find_by(id: cookies.encrypted[:current_user_id])
     end
   end
 
