@@ -43,5 +43,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'dotenv'
 gem 'railties'
+gem 'sidekiq-scheduler'
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
+gem 'webpacker-react'
 gem 'sidekiq'
 gem 'sidekiq-cron'
