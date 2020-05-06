@@ -64,6 +64,7 @@ GEM
     connection_pool (2.2.2)
     crass (1.0.6)
     dotenv (2.7.5)
+    e2mmap (0.1.0)
     erubi (1.9.0)
     et-orbi (1.2.4)
       tzinfo
@@ -222,7 +223,7 @@ DEPENDENCIES
   webpacker-react
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.1.4
