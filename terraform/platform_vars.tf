@@ -3,7 +3,7 @@
 
 locals {
   service    = "product-expiry-manager"
-  costcenter = "analyse_and_transform"
+  costcenter = "analyse-and-transform"
 }
 
 variable aws_profile {
