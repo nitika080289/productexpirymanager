@@ -39,14 +39,15 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo'
+gem 'tzinfo-data'
 
 gem 'dotenv'
-gem 'railties'
-gem 'omniauth-google-oauth2'
 gem 'omniauth'
-gem 'webpacker-react'
+gem 'omniauth-google-oauth2'
+gem 'railties'
 gem "react-rails"
-gem "webpacker"
 gem 'sidekiq'
 gem 'sidekiq-cron'
+gem "webpacker"
+gem 'webpacker-react'
