@@ -26,14 +26,23 @@ To run sidekiq, 'bundle exec sidekiq' from the root directory
 *Environment Variables required*
 
 RAILS_ENV=development
+
 SMTP_HOST=smtp.gmail.com
+
 SMTP_PORT=587
+
 DOMAIN=mail.google.com
+
 SMTP_USER=*Gmail id*
+
 SMTP_PASSWORD=*Access Token*
+
 GOOGLE_CLIENT_ID=*Google console ID*
+
 GOOGLE_CLIENT_SECRET=*Access token*
+
 REDIS_HOST=localhost
+
 REDIS_PORT=6379
 
 *Functionality supported by the application*
