@@ -21,7 +21,7 @@ spec:
       - name: product-expiry-manager
         image: 747772944961.dkr.ecr.eu-west-1.amazonaws.com/wt-plat-euwest1-container-registry-product-expiry-manager:__IMAGE_VERSION__
         command: ["/bin/sh"]
-        args: ["-c", "set -a; . /etc/product-expiry-manager/secrets.env; set +a; rails server -b tcp://0.0.0.0 -p 3000"]
+        args: ["-c", "set -a; . /etc/product-expiry-manager/secrets.env; set +a; bundle exec puma -b tcp://0.0.0.0 -p 3000"]
         ports:
         - containerPort: 3000
         volumeMounts:
