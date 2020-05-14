@@ -13,4 +13,4 @@ spec:
       paths:
       - backend:
           serviceName: product-expiry-manager
-          servicePort: 9292
+          servicePort: 3000
