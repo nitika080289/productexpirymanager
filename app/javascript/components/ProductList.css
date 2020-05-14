@@ -1,0 +1,63 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.red_dot {
+    height: 14px;
+    width: 14px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    display: block;
+}
+.green_dot {
+    height: 14px;
+    width: 14px;
+    background-color: #008000;
+    border-radius: 50%;
+    display: block;
+}
+.yellow_dot {
+    height: 14px;
+    width: 14px;
+    background-color: #FFFF00;
+    border-radius: 50%;
+    display: block;
+}
+.btn:hover {
+    background-color: RoyalBlue;
+}
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 6px 8px;
+    font-size: 10px;
+    cursor: pointer;
+}
+label{
+    margin-left: 10px;
+}
+.button {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 10px;
+}
