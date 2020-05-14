@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*About the Project*
 
-Things you may want to cover:
+This application helps keep a track of the products expiry date on your shelves. It also sends daily notifications on which products have expired/are going to expire soon. That way we can reduce food wastage.
 
-* Ruby version
+*Tech Stack*
 
-* System dependencies
+Ruby on Rails, React, Sidekiq with Redis
 
-* Configuration
+*Prerequisites for local setup*
 
-* Database creation
+Redis server up and running on your machine
+Install necessary dependencies
+Email server setup to deliver email notifications
+Google client, redis server and smtp server details handy
+Postgres db. Run migrations. Database name - productexpirymanager_development for local dev env
+Install dependencies
 
-* Database initialization
+*To run the application locally*
 
-* How to run the test suite
+From the root directory of the project, run 'rails s'. Connect to localhost:3000 to access the application. You need to 
+go through gmail authentication.
+To run sidekiq, 'bundle exec sidekiq' from the root directory
 
-* Services (job queues, cache servers, search engines, etc.)
+*Functionality supported by the application*
 
-* Deployment instructions
-
-* ...
+1. Login using gmail auth
+2. Add a new product
+3. Delete exisiting product
+4. Views the products along with the status i.e. Expired, Expiring or Safe to Use
